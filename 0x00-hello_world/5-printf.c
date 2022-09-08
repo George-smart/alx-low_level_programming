@@ -1,8 +1,10 @@
 #include <stdio.h>
 /**
- * main - print to screen
+ * main - print the string in the put function
  *
- * return 0
+ * Description: using the main function
+ * this program prints with proper grammar, but the outcome is a piece of art,
+ * return: 0
  */
 int main(void)
 {
