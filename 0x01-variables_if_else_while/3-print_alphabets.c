@@ -1,12 +1,8 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 /**
  * main - entry point
  *
- * Description: Print the lowercase of a-z
- *
- * Return: zero
+ * Return: Always 0 (Sucess)
  */
 int main(void)
 {
@@ -14,8 +10,9 @@ int main(void)
 
 	for (ch = 'a'; ch <= 'z'; ch++)
 		putchar(ch);
-
-		putchar('\n');
+	for (ch = 'A'; ch <= 'Z'; ch++)
+		putchar(ch);
+	putchar('\n');
 
 	return (0);
 }
