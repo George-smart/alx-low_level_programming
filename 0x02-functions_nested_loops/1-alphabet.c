@@ -3,7 +3,7 @@
 /**
  * Print_alphabet - Entry Point
  *
- * Return;
+ * 
  */
 void print_alphabet(void)
 {
@@ -12,6 +12,4 @@ void print_alphabet(void)
 	for (c = 'a'; c <= 'z'; c++)
 		_putchar(c);
 	_putchar('\n');
-
-	return;
 }
