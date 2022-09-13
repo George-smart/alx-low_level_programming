@@ -1,11 +1,11 @@
 #include "main.h"
 #include <ctype.h>
 /**
- * _islower - check for c function
+ * _islower - check function
+ *@c: An input character
+ * Description: function uses _islower function to chect for int c
  *
- * Description: check for lower case in c
- *
- * Return: (0) or (1)
+ * Return: int value (0 or 1)
  */
 int _islower(int c)
 {
