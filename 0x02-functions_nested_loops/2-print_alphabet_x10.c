@@ -1,9 +1,9 @@
 #include <unistd.h>
 #include "main.h"
 /**
- * main - Entry Point
+ * print_alphabet_x10 - Entry Point
  *
- * void
+ * Return: none;
  */
 void print_alphabet_x10(void)
 {

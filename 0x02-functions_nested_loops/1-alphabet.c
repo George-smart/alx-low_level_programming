@@ -1,9 +1,9 @@
 #include <unistd.h>
 #include "main.h"
 /**
- * main - Entry Point
+ * print_alphabet - Entry Point
  *
- * Void
+ * Return: void;
  */
 void print_alphabet(void)
 {
@@ -14,6 +14,6 @@ void print_alphabet(void)
         _putchar(c);
     }
     _putchar('\n');
-
+    
     return;
 }
