@@ -1,29 +1,50 @@
 #include "main.h"
 
 /**
- * _strcat - concatenation function.
- *@s1: first param to compare with.
- *@s2: second param. to compare with.
- * Return: int.
- */
-
+  * _strcmp - Compares two strings
+  * @s1: The first string
+  * @s2: The second string
+  *
+  * Return: int value
+  */
 int _strcmp(char *s1, char *s2)
 {
-    int n, i;
+	int a = 0, b = 0, c = 0, r = 0, lim;
 
-    for (i = 0; i < s1[i], s1[i] != '\0'; ++i)
-    {
-        for (n = 0; n < s2[n], s2[n] != '\0'; ++n)
-        {
-            if (s1[i] > s2[n])
-                return (1);
-            else if (s1[i] < s2[n])
-                return (-1);
-            else
-                return (0);
+	while (s1[a])
+	{
+		a++;
+	}
 
-        }
-    }
+	while (s2[b])
+	{
+		b++;
+	}
 
-    return (0);
+	if (a <= b)
+	{
+		lim = a;
+	}
+	else
+	{
+		lim = b;
+	}
+
+	while (c <= lim)
+	{
+		if (s1[c] == s2[c])
+		{
+			c++;
+			continue;
+		}
+		else
+		{
+			r = s1[c] - s2[c];
+			break;
+		}
+
+		c++;
+	}
+
+	return (r);
 }
