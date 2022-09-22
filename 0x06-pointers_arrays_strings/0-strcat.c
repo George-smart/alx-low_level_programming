@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * *_strcat - concatenation string
  *@*dest: copying destination.
