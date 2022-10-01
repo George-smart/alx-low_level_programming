@@ -7,7 +7,7 @@
  * Return: always 0.
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char const *argv[])
 {
 	(void)argc;
 	printf("The name of the program is %s\n", argv[0]);
