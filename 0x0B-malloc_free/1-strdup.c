@@ -13,9 +13,8 @@ char *_strdup(char *str)
     if (str == NULL)
         return (NULL);
         
-    char* nstr = malloc(sizeof(char) * 10);
+    char *nstr = malloc(sizeof(char) * 10);
 
-    // Check if the size is sufficient.
     if (sizeof(nstr) != sizeof(str))
         return (NULL);
     else
