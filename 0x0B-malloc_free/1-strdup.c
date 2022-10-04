@@ -9,18 +9,29 @@
  */
 
 char *_strdup(char *str)
-{ 
-    char *nstr; 
-    
-    if (str == NULL)
-        return (NULL);
-    
-    nstr = malloc(sizeof(char) * 10);
-    if (sizeof(nstr) != sizeof(str))
-        return (NULL);
-    else
-    {
-        nstr = str;
-    }
-    return (nstr);
+{
+	int a = 0, i = 1;
+	char *s;
+
+	if (str == NULL)
+		return (NULL);
+
+	while (str[i])
+	{
+		i++;
+	}
+
+	s = malloc((sizeof(char) * i) + 1);
+
+	if (s == NULL)
+		return (NULL);
+
+	while (a < i)
+	{
+		s[a] = str[a];
+		a++;
+	}
+
+	s[a] = '\0';
+	return (s);
 }
