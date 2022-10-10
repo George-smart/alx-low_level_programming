@@ -1,7 +1,6 @@
-#ifndef HEADER_FILE
-#define HEADER_FILE
-#include <stdlib.h>
+#ifndef _FUNC_LIKE_MACRO_H
+#define _FUNC_LIKED_MACRO_H
 
-#define ABS(x) abs(x)
+#define ABS(x) (((x) < 0) ? -(x) : (x))
 
 #endif
