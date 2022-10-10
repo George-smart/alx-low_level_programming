@@ -3,12 +3,12 @@
 /**
  * main - Entry function
  *
- * Return: 0u.
+ * Return: 0.
  */
 
 int main(void)
 {
-	printf("2-main.c\n");
+	printf("%s\n", __FILE__);
 
 	return (0);
 }
