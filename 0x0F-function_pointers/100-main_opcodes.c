@@ -1,35 +1,39 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <udis86.h>
 
 /**
- * main - prints opcode of own main function
- * @argc: argument count
- * @argv: array of arguments
- * Return: 1 or 2 on fail, 0 on success
- */
+  * main - ...
+  * @argc: ...
+  * @argv: ...
+  *
+  * Return: ...
+  */
 int main(int argc, char *argv[])
 {
-	int bytes, i;
-	unsigned char *func_ptr;
+	ud_t ud_obj;
+	int val = 0, i = 0;
 
-	if (argc != 2)
+	if (argc == 2)
 	{
-		printf("Error\n");
-		exit(1);
+		val = atoi(argv[1]);
+
+		if (val < 0)
+		{
+			printf("Error\n");
+			exit(2);
+		}
+
+		ud_unit(&ud_obj);
+		ud_set_input_buffer(&ud_obj, argv[1], val);
+		ud_set_mode(&ud_obj, 64);
+		ud_set_syntax(&ud_obj, UD_SYN_INTEL);
+
+		while (ud_disassemble(&ud_obj))
+		{
+			printf("\t%s\n", ud_insn_hex(&ud_obj));
+		}
 	}
-	bytes = atoi(argv[1]);
-	if (bytes < 0)
-	{
-		printf("Error\n");
-		exit(2);
-	}
-	func_ptr = (unsigned char *)main;
-	i = 0;
-	if (bytes > 0)
-	{
-		while (i < (bytes - 1))
-			printf("%02hhx ", func_ptr[i++]);
-		printf("%hhx\n", func_ptr[i]);
-	}
+
 	return (0);
 }
