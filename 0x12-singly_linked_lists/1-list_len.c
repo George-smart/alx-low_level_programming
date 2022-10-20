@@ -11,8 +11,8 @@ size_t list_len(const list_t *h)
 	unsigned int nodeslen = 0;
 	while (h)
 	{
-		h = h->next;
 		nodeslen++;
+		h = h->next;
 	}
 	
 	return (nodeslen);
