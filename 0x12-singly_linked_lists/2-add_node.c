@@ -1,6 +1,5 @@
 #include "lists.h"
 #include <string.h>
-#include <stdlib.h>
 
 /**
 * add_node - adding to the front of a list
